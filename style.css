@@ -250,18 +250,8 @@ img {
   cursor: pointer;
 }
 
-/.card_heart:hover {
-  animation: fill 5s ease-in-out;
-  display: inline-block;
-  opacity: 1;
-  background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  
-  -webkit-text-fill-color:transparent;
-  font-weight: bold;
-}
 
 
-*/
 
 .restaurants .container .cards .card {
   background:#fff;
@@ -284,6 +274,8 @@ img {
   display: inline-block;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
