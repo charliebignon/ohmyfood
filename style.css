@@ -1,0 +1,523 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+/****BASE***/
+
+body{
+  margin:0;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  box-shadow: 0px 0px 8px rgb(0 0 0/ 25%);
+  padding: 10px;
+  margin: 0;
+}
+
+main .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 8px;
+  gap: 16px;
+}
+
+/**LOADER**/
+
+.loader{
+  animation-duration: 3s;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color:#ffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms 2s  forwards;
+  transform-origin:top;
+  
+  
+}
+
+.loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid #9356dc;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 3s infinite ease-in-out;
+}
+
+
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+/****CITY****/
+
+.city {
+  box-shadow: inset 0px 5px 5px 0px #dddddd
+}
+
+
+/****EXPLORER****/
+
+.explorer {
+  text-align: center;
+  background-color: #f6f6f6;
+  
+}
+
+.explorer p{
+  font-size:18px ;
+}
+
+.explorer h2 {
+  margin:0;
+  padding: 37px;
+  font-size: 20px;
+}
+
+
+
+.explorer button {
+  background-image: linear-gradient(to top,rgba(147, 86, 220, 0.9),rgba(225,121, 218, 0.9));
+  color: white;
+  font-size: 17px;
+  padding: 16px 32px;
+  border: none;
+  border-radius:32px;
+  box-shadow: 2px 1px 16px -3px black;
+  margin-top: 16px;
+  margin-bottom: 73px;
+  
+}
+/*****TUTO***/
+
+.container{
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+  padding: 32px 16px;
+}
+
+.container h2{
+  font-size: 27px;
+}
+.tuto {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: ListCount;
+  flex-direction: column;
+  width: 90%;
+/*  margin-left: 9%;*/
+}
+
+
+ol span {
+  font-size: 16px;
+}
+.tuto_step {
+  padding: 26px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 18px;
+  background-color: #f6f6f6;
+  position: relative;
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+
+.tuto_step span {
+  margin-left: 18px;
+}
+
+.tuto_step i {
+  margin-left: 2%;
+}
+.tuto_step i:hover {
+  color: #9356dc;
+}
+
+
+li::before {
+  counter-increment: ListCount 1;
+  content: counter(ListCount);
+  width: 24px;
+  height: 24px;
+  border-radius: 90px;
+  background: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: #fff;
+  position: absolute;
+  left: -12px;
+  
+}
+
+
+
+
+/******RESTAURANT******/
+.restaurants{
+  background: #f6f6f6;
+  
+}
+
+
+.restaurants .container .cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__footer div {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  color: black;
+  padding: 16px;
+}
+
+img {
+  width: 100%;
+  height: 192px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+
+.new {
+  color: #008766;
+  background: #99E2D0;
+  border: 5px solid #99E2D0;
+  border-radius: 5px;
+  position: absolute;
+  right: 1%;
+  top: 7%;
+}
+
+.card_heart {
+  color: black;
+  cursor: pointer;
+}
+
+/.card_heart:hover {
+  animation: fill 5s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  
+  -webkit-text-fill-color:transparent;
+  font-weight: bold;
+}
+
+
+*/
+
+.restaurants .container .cards .card {
+  background:#fff;
+  border-radius: 16px;
+  position: relative;
+  display: block;
+  margin: 8px 0;
+  box-shadow: 4px 4px 8px #00000012;
+}
+
+
+
+.fill {
+  color: black;
+  cursor: pointer;
+}
+
+.fill:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.card {
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px #aaa;
+  margin: 20px;
+  position: relative;
+  background: #fff;
+}
+
+
+.heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.card figure {
+  margin: 0;
+}
+
+.card figcaption {
+  margin: 0;
+  padding: 10px;
+}
+
+.heart h4 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
+
+
+/*********FOOTER*****************/
+
+
+
+ul {
+  list-style-type: none;
+}
+
+
+a {
+  color: black;
+}
+
+
+
+.fa-utensils {
+  margin-right: 12px;
+}
+.fa-hands-helping {
+  margin-right: 5px;
+}
+
+
+footer {
+  display: block;
+  background-color: #353535;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 25px;
+  color: white;
+  
+}
+
+
+
+
+footer h3 {
+  font-family: "Shrikhand", "sans-serif";
+  
+}
+
+footer a {
+  color: white;
+}
+footer ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+footer ul {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul li {
+  padding: 5px 0 5px 0;
+}
+footer ul .fa-utensils {
+  margin-right: 12px;
+}
+footer ul .fa-hands-helping {
+  margin-right: 5px;
+}
+
+.fa-utensils {
+  padding-right: 5px;
+}
+
+footer li::before {
+  display: none;
+}
+
+/****END LINE***/
+
+.line {
+  width: 40px;
+  border: 2px solid #99E2D0;
+  margin-left: 10px;
+}
+
+
+.end_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.end_line p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.end_line p {
+  padding-right: 20px;
+}
+
+
+.end_line span {
+  margin-right: 5px;
+}
+
+
+
+
+
+/****MEDIA QUERIES****/
+
+
+@media screen and (min-width: 768px) {
+  
+  /**RESTAURANT**/
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container h2 {
+    margin-bottom: 50px;
+    margin-top: 51px;
+    text-align: center;
+    width: 100%;
+    
+  }
+  .card {
+    width: 35%;
+  }
+  
+  
+  
+  .order {
+    width: 100%;
+    
+  }
+  
+  .order h2 {
+    
+    text-align: center;
+  }
+  
+  /***TUTORIAL***/
+  
+  .tuto  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  
+  .tuto li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 25px;
+    margin: 15px 20px 15px 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 8px 2px #c4c4c4;
+    background-color: #f5f5f5;
+  }
+  
+  
+  /****FOOTER***/
+  
+  footer {
+    text-align: center;
+  }
+  
+  footer h3 {
+    font-size: 23px;
+  }
+}
