@@ -211,7 +211,7 @@ animation: fadein 9s ease-in-out;
     align-items: center;
     background-color: #99E2D0;
     width: 50px;
-    height: 63px;
+    height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     position: absolute;
