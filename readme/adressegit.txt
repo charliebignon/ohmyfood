@@ -1,2 +1,2 @@
-https://github.com/charliebignon/ohmyfoodCB.git
-https://charliebignon.github.io/ohmyfoodCB
+https://github.com/charliebignon/ohmyfood.git
+https://charliebignon.github.io/ohmyfood/
